@@ -6,8 +6,6 @@ from rclpy.node import Node
 from std_msgs.msg import *
 from sensor_msgs.msg import *
 
-import matplotlib.pyplot as plt
-
 FPS = 10
 CAM_ID = 0
 

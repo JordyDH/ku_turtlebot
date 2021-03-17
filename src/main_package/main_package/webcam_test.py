@@ -3,7 +3,7 @@ import cv2 as cv
 import numpy as np
 from cv_bridge import CvBridge
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import *
 from sensor_msgs.msg import *
 
 class Subscriber(Node):
