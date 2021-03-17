@@ -12,4 +12,7 @@ def generate_launch_description():
 	launch_ros.actions.Node(
 		package='main_package', executable='listener', output='screen',
 		name=['listener']),
+	launch_ros.actions.Node(
+		package='main_package', executable='webcam', output='screen',
+		name=['webcam']),
     ])
