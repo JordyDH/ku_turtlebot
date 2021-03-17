@@ -5,8 +5,12 @@ This project works with a single ros package (main_package).
 To create a node follow next steps.
 
 ### Create node file
-Goto the src/main_package/main_package/ folder.
-Create the node file : touch <node_name>.py
+Goto the src/main_package/main_package/ folder.  
+Create the node file: 
+
+```bash
+touch <node_name>.py
+```
 
 ### Add node file to setup.py file
 Open src/main_package/setup.py
