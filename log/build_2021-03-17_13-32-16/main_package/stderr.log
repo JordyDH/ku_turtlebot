@@ -1,0 +1,5 @@
+  File "/home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/demo_pub.py", line 19
+    self.publisher_int64.publish((Int64)self.i)
+                                        ^
+SyntaxError: invalid syntax
+

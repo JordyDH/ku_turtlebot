@@ -1,0 +1,25 @@
+[0.268s] Invoking command in '/home/jordy/ku_turtlebot/src/main_package': PYTHONPATH=/home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_package build --build-base /home/jordy/ku_turtlebot/build/main_package/build install --prefix /home/jordy/ku_turtlebot/install/main_package --record /home/jordy/ku_turtlebot/build/main_package/install.log --single-version-externally-managed
+[0.493s] running egg_info
+[0.493s] writing ../../build/main_package/main_package.egg-info/PKG-INFO
+[0.493s] writing dependency_links to ../../build/main_package/main_package.egg-info/dependency_links.txt
+[0.494s] writing entry points to ../../build/main_package/main_package.egg-info/entry_points.txt
+[0.494s] writing requirements to ../../build/main_package/main_package.egg-info/requires.txt
+[0.494s] writing top-level names to ../../build/main_package/main_package.egg-info/top_level.txt
+[0.529s] reading manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[0.530s] writing manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[0.530s] running build
+[0.530s] running build_py
+[0.530s] copying main_package/demo_pub.py -> /home/jordy/ku_turtlebot/build/main_package/build/lib/main_package
+[0.531s] running install
+[0.531s] running install_lib
+[0.532s] copying /home/jordy/ku_turtlebot/build/main_package/build/lib/main_package/demo_pub.py -> /home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package
+[0.533s] byte-compiling /home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/demo_pub.py to demo_pub.cpython-38.pyc
+[0.535s] running install_data
+[0.535s] running install_egg_info
+[0.537s] removing '/home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package-0.0.0-py3.8.egg-info' (and everything under it)
+[0.537s] Copying ../../build/main_package/main_package.egg-info to /home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package-0.0.0-py3.8.egg-info
+[0.538s] running install_scripts
+[0.557s] Installing listener script to /home/jordy/ku_turtlebot/install/main_package/lib/main_package
+[0.557s] Installing talker script to /home/jordy/ku_turtlebot/install/main_package/lib/main_package
+[0.557s] writing list of installed files to '/home/jordy/ku_turtlebot/build/main_package/install.log'
+[0.582s] Invoked command in '/home/jordy/ku_turtlebot/src/main_package' returned '0': PYTHONPATH=/home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_package build --build-base /home/jordy/ku_turtlebot/build/main_package/build install --prefix /home/jordy/ku_turtlebot/install/main_package --record /home/jordy/ku_turtlebot/build/main_package/install.log --single-version-externally-managed
