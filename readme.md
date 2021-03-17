@@ -27,7 +27,10 @@ launch_ros.actions.Node(
 
 When you use a lib in python you will need to check the package.xml file to see if it is present.  
 If not add this line with the lib name:  
+
+```xml
 <exec_depend> "lib name" </exec_depend>  
+```
 
 ## Developers
 
