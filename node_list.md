@@ -2,7 +2,8 @@
 
 | Node file       | Executable name     | Publisher Name             | Data type   |
 | --------------- | ------------------- | -------------------------- | ----------- | 
-| demo_pub.py     | talker              | tick                       | String      |
+| demo_pub.py     | talker              | test_string                | String      |
+| demo_pub.py     | talker              | test_int32                 | Int32       |
 
 
 ## Publisher descriptions
