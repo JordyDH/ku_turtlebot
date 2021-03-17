@@ -27,6 +27,7 @@ setup(
 		"talker = main_package.demo_pub:main",
 		"listener = main_package.demo_sub:main",
 		"webcam = main_package.webcam:main",
+		"webcam_test = main_package.webcam_test:main",
         ],
     },
 )

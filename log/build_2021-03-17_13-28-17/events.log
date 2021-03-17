@@ -1,0 +1,101 @@
+[0.000000] (-) TimerEvent: {}
+[0.001199] (main_package) JobQueued: {'identifier': 'main_package', 'dependencies': OrderedDict()}
+[0.003799] (main_package) JobStarted: {'identifier': 'main_package'}
+[0.098967] (-) TimerEvent: {}
+[0.206173] (-) TimerEvent: {}
+[0.316358] (-) TimerEvent: {}
+[0.417734] (-) TimerEvent: {}
+[0.518855] (-) TimerEvent: {}
+[0.620025] (-) TimerEvent: {}
+[0.721188] (-) TimerEvent: {}
+[0.822343] (-) TimerEvent: {}
+[0.923629] (-) TimerEvent: {}
+[1.024959] (-) TimerEvent: {}
+[1.126091] (-) TimerEvent: {}
+[1.227242] (-) TimerEvent: {}
+[1.328377] (-) TimerEvent: {}
+[1.429521] (-) TimerEvent: {}
+[1.530814] (-) TimerEvent: {}
+[1.632646] (-) TimerEvent: {}
+[1.734358] (-) TimerEvent: {}
+[1.836119] (-) TimerEvent: {}
+[1.937979] (-) TimerEvent: {}
+[2.039826] (-) TimerEvent: {}
+[2.141660] (-) TimerEvent: {}
+[2.243549] (-) TimerEvent: {}
+[2.345697] (-) TimerEvent: {}
+[2.449161] (-) TimerEvent: {}
+[2.475899] (main_package) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/main_package', 'build', '--build-base', '/home/ubuntu/ku_turtlebot/build/main_package/build', 'install', '--prefix', '/home/ubuntu/ku_turtlebot/install/main_package', '--record', '/home/ubuntu/ku_turtlebot/build/main_package/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/ku_turtlebot/src/main_package', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '192.168.1.60 38976 22', 'LC_TIME': 'de_BE.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'de_BE.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/turtlebot3_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '7', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'de_BE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'de_BE.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/ubuntu/turtlebot3_ws/install/turtlebot3:/home/ubuntu/turtlebot3_ws/install/turtlebot3_teleop:/home/ubuntu/turtlebot3_ws/install/turtlebot3_bringup:/home/ubuntu/turtlebot3_ws/install/turtlebot3_node:/home/ubuntu/turtlebot3_ws/install/turtlebot3_example:/home/ubuntu/turtlebot3_ws/install/turtlebot3_description:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'de_BE.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_BE.UTF-8', 'LC_IDENTIFICATION': 'de_BE.UTF-8', 'PWD': '/home/ubuntu/ku_turtlebot/build/main_package', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.60 38976 192.168.1.15 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages:/home/ubuntu/turtlebot3_ws/build/turtlebot3_teleop:/home/ubuntu/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/home/ubuntu/turtlebot3_ws/build/turtlebot3_example:/home/ubuntu/turtlebot3_ws/install/turtlebot3_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'de_BE.UTF-8', 'LC_PAPER': 'de_BE.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/turtlebot3_ws/install/turtlebot3:/home/ubuntu/turtlebot3_ws/install/turtlebot3_bringup:/home/ubuntu/turtlebot3_ws/install/turtlebot3_node:/home/ubuntu/turtlebot3_ws/install/turtlebot3_description'}, 'shell': False}
+[2.549583] (-) TimerEvent: {}
+[2.651778] (-) TimerEvent: {}
+[2.754027] (-) TimerEvent: {}
+[2.855749] (-) TimerEvent: {}
+[2.957666] (-) TimerEvent: {}
+[3.059450] (-) TimerEvent: {}
+[3.161290] (-) TimerEvent: {}
+[3.263029] (-) TimerEvent: {}
+[3.364878] (-) TimerEvent: {}
+[3.467092] (-) TimerEvent: {}
+[3.568846] (-) TimerEvent: {}
+[3.670510] (-) TimerEvent: {}
+[3.772383] (-) TimerEvent: {}
+[3.874077] (-) TimerEvent: {}
+[3.975828] (-) TimerEvent: {}
+[4.077649] (-) TimerEvent: {}
+[4.179338] (-) TimerEvent: {}
+[4.281078] (-) TimerEvent: {}
+[4.382887] (-) TimerEvent: {}
+[4.484647] (-) TimerEvent: {}
+[4.585721] (-) TimerEvent: {}
+[4.686807] (-) TimerEvent: {}
+[4.788005] (-) TimerEvent: {}
+[4.889174] (-) TimerEvent: {}
+[4.990336] (-) TimerEvent: {}
+[5.091578] (-) TimerEvent: {}
+[5.130272] (main_package) StdoutLine: {'line': b'running egg_info\n'}
+[5.134410] (main_package) StdoutLine: {'line': b'creating ../../build/main_package/main_package.egg-info\n'}
+[5.135627] (main_package) StdoutLine: {'line': b'writing ../../build/main_package/main_package.egg-info/PKG-INFO\n'}
+[5.137636] (main_package) StdoutLine: {'line': b'writing dependency_links to ../../build/main_package/main_package.egg-info/dependency_links.txt\n'}
+[5.138985] (main_package) StdoutLine: {'line': b'writing entry points to ../../build/main_package/main_package.egg-info/entry_points.txt\n'}
+[5.140322] (main_package) StdoutLine: {'line': b'writing requirements to ../../build/main_package/main_package.egg-info/requires.txt\n'}
+[5.141581] (main_package) StdoutLine: {'line': b'writing top-level names to ../../build/main_package/main_package.egg-info/top_level.txt\n'}
+[5.165111] (main_package) StdoutLine: {'line': b"writing manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'\n"}
+[5.191977] (-) TimerEvent: {}
+[5.293487] (-) TimerEvent: {}
+[5.394764] (-) TimerEvent: {}
+[5.496085] (-) TimerEvent: {}
+[5.504581] (main_package) StdoutLine: {'line': b"reading manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'\n"}
+[5.511647] (main_package) StdoutLine: {'line': b"writing manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'\n"}
+[5.513132] (main_package) StdoutLine: {'line': b'running build\n'}
+[5.514079] (main_package) StdoutLine: {'line': b'running build_py\n'}
+[5.515598] (main_package) StdoutLine: {'line': b'creating /home/ubuntu/ku_turtlebot/build/main_package/build\n'}
+[5.516914] (main_package) StdoutLine: {'line': b'creating /home/ubuntu/ku_turtlebot/build/main_package/build/lib\n'}
+[5.518062] (main_package) StdoutLine: {'line': b'creating /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package\n'}
+[5.518983] (main_package) StdoutLine: {'line': b'copying main_package/__init__.py -> /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package\n'}
+[5.520236] (main_package) StdoutLine: {'line': b'copying main_package/demo_sub.py -> /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package\n'}
+[5.521421] (main_package) StdoutLine: {'line': b'copying main_package/demo_pub.py -> /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package\n'}
+[5.522352] (main_package) StdoutLine: {'line': b'running install\n'}
+[5.532623] (main_package) StdoutLine: {'line': b'running install_lib\n'}
+[5.548460] (main_package) StdoutLine: {'line': b'creating /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package\n'}
+[5.549899] (main_package) StdoutLine: {'line': b'copying /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package/__init__.py -> /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package\n'}
+[5.551015] (main_package) StdoutLine: {'line': b'copying /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package/demo_sub.py -> /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package\n'}
+[5.552285] (main_package) StdoutLine: {'line': b'copying /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package/demo_pub.py -> /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package\n'}
+[5.556723] (main_package) StdoutLine: {'line': b'byte-compiling /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/__init__.py to __init__.cpython-38.pyc\n'}
+[5.566754] (main_package) StdoutLine: {'line': b'byte-compiling /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/demo_sub.py to demo_sub.cpython-38.pyc\n'}
+[5.569848] (main_package) StdoutLine: {'line': b'byte-compiling /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/demo_pub.py to demo_pub.cpython-38.pyc\n'}
+[5.573073] (main_package) StdoutLine: {'line': b'running install_data\n'}
+[5.581479] (main_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.596364] (-) TimerEvent: {}
+[5.597576] (main_package) StdoutLine: {'line': b'Copying ../../build/main_package/main_package.egg-info to /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package-0.0.0-py3.8.egg-info\n'}
+[5.607076] (main_package) StdoutLine: {'line': b'running install_scripts\n'}
+[5.696605] (-) TimerEvent: {}
+[5.785344] (main_package) StdoutLine: {'line': b'Installing listener script to /home/ubuntu/ku_turtlebot/install/main_package/lib/main_package\n'}
+[5.787050] (main_package) StdoutLine: {'line': b'Installing talker script to /home/ubuntu/ku_turtlebot/install/main_package/lib/main_package\n'}
+[5.790381] (main_package) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/ku_turtlebot/build/main_package/install.log'\n"}
+[5.796957] (-) TimerEvent: {}
+[5.898322] (-) TimerEvent: {}
+[5.978782] (main_package) CommandEnded: {'returncode': 0}
+[6.000133] (-) TimerEvent: {}
+[6.102863] (-) TimerEvent: {}
+[6.113385] (main_package) JobEnded: {'identifier': 'main_package', 'rc': 0}
+[6.118307] (-) EventReactorShutdown: {}

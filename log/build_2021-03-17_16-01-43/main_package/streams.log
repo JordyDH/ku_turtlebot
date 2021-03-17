@@ -1,0 +1,27 @@
+[0.278s] Invoking command in '/home/jordy/ku_turtlebot/src/main_package': PYTHONPATH=/home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_package build --build-base /home/jordy/ku_turtlebot/build/main_package/build install --prefix /home/jordy/ku_turtlebot/install/main_package --record /home/jordy/ku_turtlebot/build/main_package/install.log --single-version-externally-managed
+[0.521s] running egg_info
+[0.521s] writing ../../build/main_package/main_package.egg-info/PKG-INFO
+[0.522s] writing dependency_links to ../../build/main_package/main_package.egg-info/dependency_links.txt
+[0.522s] writing entry points to ../../build/main_package/main_package.egg-info/entry_points.txt
+[0.522s] writing requirements to ../../build/main_package/main_package.egg-info/requires.txt
+[0.522s] writing top-level names to ../../build/main_package/main_package.egg-info/top_level.txt
+[0.559s] reading manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[0.560s] writing manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[0.561s] running build
+[0.561s] running build_py
+[0.561s] copying main_package/webcam_test.py -> /home/jordy/ku_turtlebot/build/main_package/build/lib/main_package
+[0.561s] running install
+[0.562s] running install_lib
+[0.563s] copying /home/jordy/ku_turtlebot/build/main_package/build/lib/main_package/webcam_test.py -> /home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package
+[0.564s] byte-compiling /home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/webcam_test.py to webcam_test.cpython-38.pyc
+[0.565s] running install_data
+[0.566s] running install_egg_info
+[0.568s] removing '/home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package-0.0.0-py3.8.egg-info' (and everything under it)
+[0.568s] Copying ../../build/main_package/main_package.egg-info to /home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package-0.0.0-py3.8.egg-info
+[0.569s] running install_scripts
+[0.588s] Installing listener script to /home/jordy/ku_turtlebot/install/main_package/lib/main_package
+[0.588s] Installing talker script to /home/jordy/ku_turtlebot/install/main_package/lib/main_package
+[0.588s] Installing webcam script to /home/jordy/ku_turtlebot/install/main_package/lib/main_package
+[0.588s] Installing webcam_test script to /home/jordy/ku_turtlebot/install/main_package/lib/main_package
+[0.589s] writing list of installed files to '/home/jordy/ku_turtlebot/build/main_package/install.log'
+[0.612s] Invoked command in '/home/jordy/ku_turtlebot/src/main_package' returned '0': PYTHONPATH=/home/jordy/ku_turtlebot/install/main_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_package build --build-base /home/jordy/ku_turtlebot/build/main_package/build install --prefix /home/jordy/ku_turtlebot/install/main_package --record /home/jordy/ku_turtlebot/build/main_package/install.log --single-version-externally-managed

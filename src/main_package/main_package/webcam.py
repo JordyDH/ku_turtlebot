@@ -1,24 +1,30 @@
 import rclpy
 import cv2 as cv
+import numpy as np
+from cv_bridge import CvBridge
 from rclpy.node import Node
 from std_msgs.msg import *
+from sensor_msgs.msg import *
 
-print(cv.__version__)
-FPS = 30
+import matplotlib.pyplot as plt
+
+FPS = 10
+CAM_ID = 0
 
 class Publisher(Node):
 
 	def __init__(self):
 		super().__init__('webcam_publisher')
 		self.get_logger().info('Webcam service Starting')
-		self.publisher_webcam = self.create_publisher(Int32, 'webcam', 10)
+		self.publisher_webcam = self.create_publisher(Image, 'webcam', 10)
+		self.cam = cv.VideoCapture(CAM_ID)
+		self.bridge = CvBridge()
 		self.timer = self.create_timer(1/FPS, self.timer_callback)
 
 	def timer_callback(self):
-		frame = Int32()
-		frame.data = 0
-		self.publisher_webcam.publish(frame)
-		self.get_logger().info('Webcam service running')
+		_,frame = self.cam.read()
+		msg = self.bridge.cv2_to_imgmsg(frame, encoding="passthrough")
+		self.publisher_webcam.publish(msg)
 
 def main(args=None):
 	rclpy.init(args=args)		#Init RCLPY met de argumenten

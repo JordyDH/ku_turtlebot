@@ -1,0 +1,36 @@
+[2.482s] Invoking command in '/home/ubuntu/ku_turtlebot/src/main_package': PYTHONPATH=/home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_package build --build-base /home/ubuntu/ku_turtlebot/build/main_package/build install --prefix /home/ubuntu/ku_turtlebot/install/main_package --record /home/ubuntu/ku_turtlebot/build/main_package/install.log --single-version-externally-managed
+[5.126s] running egg_info
+[5.130s] creating ../../build/main_package/main_package.egg-info
+[5.131s] writing ../../build/main_package/main_package.egg-info/PKG-INFO
+[5.133s] writing dependency_links to ../../build/main_package/main_package.egg-info/dependency_links.txt
+[5.135s] writing entry points to ../../build/main_package/main_package.egg-info/entry_points.txt
+[5.136s] writing requirements to ../../build/main_package/main_package.egg-info/requires.txt
+[5.137s] writing top-level names to ../../build/main_package/main_package.egg-info/top_level.txt
+[5.161s] writing manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[5.500s] reading manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[5.508s] writing manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[5.509s] running build
+[5.510s] running build_py
+[5.512s] creating /home/ubuntu/ku_turtlebot/build/main_package/build
+[5.513s] creating /home/ubuntu/ku_turtlebot/build/main_package/build/lib
+[5.514s] creating /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package
+[5.515s] copying main_package/__init__.py -> /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package
+[5.516s] copying main_package/demo_sub.py -> /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package
+[5.517s] copying main_package/demo_pub.py -> /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package
+[5.518s] running install
+[5.528s] running install_lib
+[5.545s] creating /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package
+[5.546s] copying /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package/__init__.py -> /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package
+[5.547s] copying /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package/demo_sub.py -> /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package
+[5.548s] copying /home/ubuntu/ku_turtlebot/build/main_package/build/lib/main_package/demo_pub.py -> /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package
+[5.553s] byte-compiling /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/__init__.py to __init__.cpython-38.pyc
+[5.563s] byte-compiling /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/demo_sub.py to demo_sub.cpython-38.pyc
+[5.566s] byte-compiling /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/demo_pub.py to demo_pub.cpython-38.pyc
+[5.569s] running install_data
+[5.577s] running install_egg_info
+[5.593s] Copying ../../build/main_package/main_package.egg-info to /home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package-0.0.0-py3.8.egg-info
+[5.603s] running install_scripts
+[5.781s] Installing listener script to /home/ubuntu/ku_turtlebot/install/main_package/lib/main_package
+[5.783s] Installing talker script to /home/ubuntu/ku_turtlebot/install/main_package/lib/main_package
+[5.786s] writing list of installed files to '/home/ubuntu/ku_turtlebot/build/main_package/install.log'
+[5.976s] Invoked command in '/home/ubuntu/ku_turtlebot/src/main_package' returned '0': PYTHONPATH=/home/ubuntu/ku_turtlebot/install/main_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_package build --build-base /home/ubuntu/ku_turtlebot/build/main_package/build install --prefix /home/ubuntu/ku_turtlebot/install/main_package --record /home/ubuntu/ku_turtlebot/build/main_package/install.log --single-version-externally-managed
