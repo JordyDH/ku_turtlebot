@@ -84,9 +84,10 @@ class Sonar():
 
 def main(args=None):
     rclpy.init(args=args)
-    sonar_publisher = Sonar()
     PIN_TRIGGER = 5
     PIN_ECHO = 6
+    sonar_publisher = Sonar(5,6)
+    
 
 
     sonar = Sonar(PIN_TRIGGER, PIN_ECHO)
