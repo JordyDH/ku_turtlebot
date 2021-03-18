@@ -11,7 +11,7 @@ from sensor_msgs.msg import *
 class Sonar():
 
     def __init__(self, gpio_trigger, gpio_echo, range_min=10, range_max=400):
-        super().__init__('sonar_publisher')
+        """super().__init__('sonar_publisher')"""
         self.get_logger().info('sonar service Starting')
         self.publisher_webcam = self.create_publisher(Int32, 'sonar', 10)
         
