@@ -8,7 +8,7 @@ from rclpy.node import Node
 from std_msgs.msg import *
 from sensor_msgs.msg import *
 
-class Sonar():
+class Sonar(Node):
 
     def __init__(self, gpio_trigger, gpio_echo, range_min=10, range_max=400):
         super().__init__('sonar_publisher')
