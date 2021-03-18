@@ -15,4 +15,8 @@ def generate_launch_description():
 	launch_ros.actions.Node(
 		package='main_package', executable='webcam', output='screen',
 		name=['webcam']),
+		
+	launch_ros.actions.Node(
+		package='main_package', executable='sonar_test', output='screen',
+		name=['sonar_test']),
     ])
