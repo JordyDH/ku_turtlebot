@@ -1,0 +1,31 @@
+[0.220s] Invoking command in '/home/jef/Documents/turtlebot/ku_turtlebot/src/main_package': PYTHONPATH=/home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_package build --build-base /home/jef/Documents/turtlebot/ku_turtlebot/build/main_package/build install --prefix /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package --record /home/jef/Documents/turtlebot/ku_turtlebot/build/main_package/install.log --single-version-externally-managed
+[0.403s] running egg_info
+[0.404s] writing ../../build/main_package/main_package.egg-info/PKG-INFO
+[0.404s] writing dependency_links to ../../build/main_package/main_package.egg-info/dependency_links.txt
+[0.405s] writing entry points to ../../build/main_package/main_package.egg-info/entry_points.txt
+[0.405s] writing requirements to ../../build/main_package/main_package.egg-info/requires.txt
+[0.405s] writing top-level names to ../../build/main_package/main_package.egg-info/top_level.txt
+[0.435s] reading manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[0.436s] writing manifest file '../../build/main_package/main_package.egg-info/SOURCES.txt'
+[0.436s] running build
+[0.436s] running build_py
+[0.436s] copying main_package/webcam.py -> /home/jef/Documents/turtlebot/ku_turtlebot/build/main_package/build/lib/main_package
+[0.436s] running install
+[0.437s] running install_lib
+[0.438s] copying /home/jef/Documents/turtlebot/ku_turtlebot/build/main_package/build/lib/main_package/webcam.py -> /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package
+[0.439s] byte-compiling /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/lidar.py to lidar.cpython-38.pyc
+[0.440s] Sorry: TabError: inconsistent use of tabs and spaces in indentation (lidar.py, line 13)
+[0.440s] byte-compiling /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package/webcam.py to webcam.cpython-38.pyc
+[0.441s] running install_data
+[0.441s] copying launch/_launch.py -> /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/share/main_package
+[0.441s] running install_egg_info
+[0.443s] removing '/home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package-0.0.0-py3.8.egg-info' (and everything under it)
+[0.443s] Copying ../../build/main_package/main_package.egg-info to /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/python3.8/site-packages/main_package-0.0.0-py3.8.egg-info
+[0.444s] running install_scripts
+[0.461s] Installing lidar script to /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/main_package
+[0.461s] Installing listener script to /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/main_package
+[0.461s] Installing talker script to /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/main_package
+[0.462s] Installing webcam script to /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/main_package
+[0.462s] Installing webcam_test script to /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/main_package
+[0.462s] writing list of installed files to '/home/jef/Documents/turtlebot/ku_turtlebot/build/main_package/install.log'
+[0.482s] Invoked command in '/home/jef/Documents/turtlebot/ku_turtlebot/src/main_package' returned '0': PYTHONPATH=/home/jef/Documents/turtlebot/ku_turtlebot/install/main_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_package build --build-base /home/jef/Documents/turtlebot/ku_turtlebot/build/main_package/build install --prefix /home/jef/Documents/turtlebot/ku_turtlebot/install/main_package --record /home/jef/Documents/turtlebot/ku_turtlebot/build/main_package/install.log --single-version-externally-managed

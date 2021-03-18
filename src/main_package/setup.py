@@ -28,6 +28,7 @@ setup(
 		"listener = main_package.demo_sub:main",
 		"webcam = main_package.webcam:main",
 		"webcam_test = main_package.webcam_test:main",
+        "lidar = main_package.lidar:main",
         ],
     },
 )
