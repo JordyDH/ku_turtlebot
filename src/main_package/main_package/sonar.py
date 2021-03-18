@@ -11,9 +11,9 @@ from sensor_msgs.msg import *
 class Sonar():
 
     def __init__(self, gpio_trigger, gpio_echo, range_min=10, range_max=400):
-        """super().__init__('sonar_publisher')"""
+        super().__init__('sonar_publisher')
         self.get_logger().info('sonar service Starting')
-        self.publisher_webcam = self.create_publisher(Int32, 'sonar', 10)
+        self.publisher_sonar = self.create_publisher(Int32, 'sonar', 10)
         
         GPIO.setmode(GPIO.BCM)
         self._gpio_trigger  = gpio_trigger
@@ -87,10 +87,6 @@ def main(args=None):
     PIN_TRIGGER = 5
     PIN_ECHO = 6
     sonar_publisher = Sonar(5,6)
-    
-
-
-    sonar = Sonar(PIN_TRIGGER, PIN_ECHO)
     rclpy.spin(sonar_publisher)	#Spin : laat de node actief blijven
     
     while True:
