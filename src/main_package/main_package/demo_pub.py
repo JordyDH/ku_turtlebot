@@ -1,15 +1,22 @@
+# DEV  : <PLACE HERE YOUR NAMES>
+# DATE : <DATE OF CREATION>
+# DESCRIPTION :  
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import *
 
-class Publisher(Node):
+#NODE GLOBAL SETTINGS
+update_rate	= 1
+node_name 	= "DEMO_NODE"
 
+# MAKE SURE THE CLASS INHERITS FROM NODE CLASS
+class Publisher(Node):
 	def __init__(self):
 		super().__init__('demo_publisher')
 		self.publisher_string = self.create_publisher(String, 'test_string', 10)
 		self.publisher_int32 = self.create_publisher(Int32, 'test_int32', 10)
-		timer_period = 1  # 1 second period
-		self.timer = self.create_timer(timer_period, self.timer_callback)
+		self.timer = self.create_timer(1/update_rate, self.timer_callback)
 		self.i = 0
 
 	def timer_callback(self):
