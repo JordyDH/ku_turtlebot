@@ -1,5 +1,4 @@
 import rclpy
-#import rospy
 from sensor_msgs.msg import LaserScan
 from rclpy.node import Node
 from std_msgs.msg import *
@@ -13,9 +12,7 @@ class Lidar(Node):
         super().__init__('lidar_publisher')
         self.get_logger().info('Lidar service Starting')
         self.publisher_lidar = self.create_publisher(LaserScan, 'lidar', 10)
-        #scan_pub = rospy.Publisher('scan', LaserScan, queue_size=50)
         self.timer = self.create_timer(1/FREQ, self.timer_callback)
-        self.count = 0
     
     def timer_callback(self):
         self.getReading()
@@ -39,9 +36,6 @@ class Lidar(Node):
         # for i in range(0, NUMREADINGS):
         #     scan.ranges.append(1.0 * self.count)  # fake data
         #     scan.intensities.append(1)  # fake data
-        
-        self.count += 1
-
 
         self.publisher_lidar.publish(scan)
 

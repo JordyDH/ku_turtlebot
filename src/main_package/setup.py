@@ -29,6 +29,7 @@ setup(
 		"webcam = main_package.webcam:main",
 		"webcam_test = main_package.webcam_test:main",
         "lidar = main_package.lidar:main",
+        "lidar_test = main_package.lidar_test:main",
         ],
     },
 )
