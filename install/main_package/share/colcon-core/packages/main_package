@@ -1,1 +1,1 @@
-CvBridge:cv2:numpy:rclpy:sensor_msgs:std_msgs
+CvBridge:cv2:numpy:rclpy:rosgraph_msgs:rospy:sensor_msgs:std_msgs
