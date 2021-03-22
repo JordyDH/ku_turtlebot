@@ -24,7 +24,7 @@ class Sonar(Node):
         self._speed_sound   = 17150.0 #- divided by 2 in cm/s
         
         self._last_time_reading = 0
-        self._timeout       = self.range_max/self._speed_sound*2
+        self._timeout       = self._range_max/self._speed_sound*2
 
         GPIO.setup(5, GPIO.OUT)
         GPIO.setup(6, GPIO.IN)
