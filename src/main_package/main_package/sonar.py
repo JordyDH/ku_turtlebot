@@ -1,4 +1,3 @@
-#!/usr/bin/python
 import RPi.GPIO as GPIO
 import time
 import rclpy
@@ -10,16 +9,16 @@ from sensor_msgs.msg import *
 
 class Sonar(Node):
 
-    def __init__(self, gpio_trigger, gpio_echo, range_min=10, range_max=400):
+    def __init__(self):
         super().__init__('sonar_publisher')
         self.get_logger().info('sonar service Starting')
         self.publisher_sonar = self.create_publisher(Int32, 'sonar', 10)
         
         GPIO.setmode(GPIO.BCM)
-        self._gpio_trigger  = gpio_trigger
-        self._gpio_echo     = gpio_echo
-        self._range_min     = range_min
-        self._range_max     = range_max
+        self._gpio_trigger  = 5
+        self._gpio_echo     = 6
+        self._range_min     = 10
+        self._range_max     = 400
         self._is_reading    = False
         
         self._speed_sound   = 17150.0 #- divided by 2 in cm/s
@@ -27,11 +26,11 @@ class Sonar(Node):
         self._last_time_reading = 0
         self._timeout       = range_max/self._speed_sound*2
 
-        GPIO.setup(gpio_trigger, GPIO.OUT)
-        GPIO.setup(gpio_echo, GPIO.IN)
+        GPIO.setup(5, GPIO.OUT)
+        GPIO.setup(6, GPIO.IN)
 
         #- Waiting for sensor to settle
-        GPIO.output(gpio_trigger, GPIO.LOW)
+        GPIO.output(5, GPIO.LOW)
         
         self.timer = self.create_timer(1/FPS, self.timer_callback)
         time.sleep(1)
@@ -86,7 +85,7 @@ def main(args=None):
     rclpy.init(args=args)
     PIN_TRIGGER = 5
     PIN_ECHO = 6
-    sonar_publisher = Sonar(5,6)
+    sonar_publisher = Sonar()
     rclpy.spin(sonar_publisher)	#Spin : laat de node actief blijven
     
     while True:
