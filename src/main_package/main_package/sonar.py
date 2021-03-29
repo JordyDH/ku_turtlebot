@@ -16,6 +16,7 @@ class Sonar(Node):
         super().__init__('sonar_publisher')
         self.get_logger().info('sonar service Starting')
         self.publisher_sonar = self.create_publisher(Int32, 'sonar', 10)
+        self.publisher_break = self.create_publisher(Int32, 'break', 10)
         
         GPIO.setmode(GPIO.BCM)
         self._gpio_trigger  = 5
@@ -41,10 +42,11 @@ class Sonar(Node):
         
     def timer_callback(self):
 		
-        afstandgelezen = sonar.get_range()
+        afstandgelezen = self.get_range()
         if afstandgelezen>0: print ("Distance = %5.1f cm"%afstandgelezen)
 
-        if afstandgelezen<BREAKDISTANCE: self.publisher_sonar.publish(BREAKFLAG)
+        if afstandgelezen<BREAKDISTANCE: 
+            self.publisher_break.publish(BREAKFLAG)
         else:
             self.publisher_sonar.publish(afstandgelezen)
    
