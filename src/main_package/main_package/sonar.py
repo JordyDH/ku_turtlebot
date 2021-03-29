@@ -45,7 +45,7 @@ class Sonar(Node):
     def timer_callback(self):
         self.get_logger().info('Timer called ')
         afstandgelezen = self.get_range()
-        self.get_logger().info(afstandgelezen)
+    
         if afstandgelezen<BREAKDISTANCE: 
             self.publisher_break.publish(BREAKFLAG)
         else:
@@ -70,14 +70,14 @@ class Sonar(Node):
         pulse_end_time = time.time()
         #--- Wait for the answer
         """while GPIO.input(self._gpio_echo)==0:"""
-        self.get_logger().info('l73 ')
+       
         pulse_start_time = time.time()
-        self.get_logger().info('l74 ')
+       
             
         time0= time.time()
         #while GPIO.input(self._gpio_echo)==1:
         pulse_end_time = time.time()
-        self.get_logger().info('l75')
+       
             
         self._last_time_reading = time.time()
         self._is_reading = False
