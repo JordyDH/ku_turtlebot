@@ -46,7 +46,7 @@ class Sonar(Node):
         self.get_logger().info('Timer called ')
         i_32 = Int32()
         i_32.data = self.get_range()
-        
+        print (i_32.data)
     
         #if afstandgelezen<BREAKDISTANCE: 
             #self.publisher_break.publish(BREAKFLAG)
