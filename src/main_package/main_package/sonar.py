@@ -7,6 +7,8 @@ from rclpy.node import Node
 from std_msgs.msg import *
 from sensor_msgs.msg import *
 
+
+update = 10
 class Sonar(Node):
 
     def __init__(self):
@@ -26,14 +28,21 @@ class Sonar(Node):
         self._last_time_reading = 0
         self._timeout       = self._range_max/self._speed_sound*2
 
+        
+
         GPIO.setup(5, GPIO.OUT)
         GPIO.setup(6, GPIO.IN)
 
         #- Waiting for sensor to settle
         GPIO.output(5, GPIO.LOW)
         
-        self.timer = self.create_timer(1/FPS, self.timer_callback)
-        time.sleep(1)
+        self.timer = self.create_timer(1/update, self.timer_callback)
+        
+    def timer_callback(self):
+		
+        afstandgelezen = sonar.get_range()
+        if afstandgelezen>0: print ("Distance = %5.1f cm"%afstandgelezen)
+        self.publisher_sonar.publish(afstandgelezen)
    
         
         
@@ -85,9 +94,6 @@ def main(args=None):
     sonar_publisher = Sonar()
     rclpy.spin(sonar_publisher)	#Spin : laat de node actief blijven
     
-    while True:
-        d = sonar.get_range()
-        if d>0: print ("Distance = %5.1f cm"%d)
     sonar_publisher.destroy_node()
     rclpy.shutdown()
 
