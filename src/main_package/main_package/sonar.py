@@ -45,7 +45,7 @@ class Sonar(Node):
     def timer_callback(self):
 		
         afstandgelezen = self.get_range()
-        print ("Distance = %5.1f cm"%afstandgelezen)
+        self.get_logger().info(afstandgelezen)
 
         if afstandgelezen<BREAKDISTANCE: 
             self.publisher_break.publish(BREAKFLAG)
