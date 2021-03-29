@@ -44,12 +44,13 @@ class Sonar(Node):
         
     def timer_callback(self):
         self.get_logger().info('Timer called ')
-        afstandgelezen = self.get_range()
+        i_32 = Int32()
+        i_32.data = self.get_range()
+        
     
         #if afstandgelezen<BREAKDISTANCE: 
             #self.publisher_break.publish(BREAKFLAG)
-        else:
-            self.publisher_sonar.publish(afstandgelezen)
+        self.publisher_sonar.publish(i_32)
    
         
         
