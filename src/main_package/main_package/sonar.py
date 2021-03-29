@@ -7,7 +7,8 @@ from rclpy.node import Node
 from std_msgs.msg import *
 from sensor_msgs.msg import *
 
-
+BREAKFLAG = 1
+BREAKDISTANCE = 20
 update = 10
 class Sonar(Node):
 
@@ -42,7 +43,10 @@ class Sonar(Node):
 		
         afstandgelezen = sonar.get_range()
         if afstandgelezen>0: print ("Distance = %5.1f cm"%afstandgelezen)
-        self.publisher_sonar.publish(afstandgelezen)
+
+        if afstandgelezen<BREAKDISTANCE: self.publisher_sonar.publish(BREAKFLAG)
+        else:
+            self.publisher_sonar.publish(afstandgelezen)
    
         
         
