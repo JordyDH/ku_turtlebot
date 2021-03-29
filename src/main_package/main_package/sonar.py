@@ -18,7 +18,9 @@ class Sonar(Node):
         self.publisher_sonar = self.create_publisher(Int32, 'sonar', 10)
         self.publisher_break = self.create_publisher(Int32, 'break', 10)
         
+
         GPIO.setmode(GPIO.BCM)
+        GPIO.setwarnings(False)
         self._gpio_trigger  = 5
         self._gpio_echo     = 6
         self._range_min     = 10
