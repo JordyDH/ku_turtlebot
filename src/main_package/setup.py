@@ -29,6 +29,8 @@ setup(
 		"webcam = main_package.webcam:main",
 		"webcam_test = main_package.webcam_test:main",
 		"webcam_stream = main_package.webcam_stream:main",
+		"wheels = main_package.wheels:main",
+		"wheels_test = main_package.wheels_test:main",  		
         ],
     },
 )
