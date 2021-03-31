@@ -18,7 +18,7 @@ class Lidar(Node):
     def laser_callback(self, msg):
         self.get_logger().info(msg)
         self.publisher_lidar.publish(msg)
-        # print(msg)
+        print(msg)
     
     def timer_callback(self):
         self.getReading()
