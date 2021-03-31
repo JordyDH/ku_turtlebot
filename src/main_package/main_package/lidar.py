@@ -16,7 +16,7 @@ class Lidar(Node):
         # self.timer = self.create_timer(1/FREQ, self.timer_callback)
     
     def laser_callback(self, msg):
-        # self.get_logger().info(msg)
+        self.get_logger().info(msg)
         self.publisher_lidar.publish(msg)
         # print(msg)
     
