@@ -45,54 +45,39 @@ class Sonar(Node):
     def timer_callback(self):
         self.get_logger().info('Timer called ')
         i_32 = Int32()
-        i_32.data = self.get_range()
+        i_32.data = self.distance()
         print (i_32.data)
     
         #if afstandgelezen<BREAKDISTANCE: 
             #self.publisher_break.publish(BREAKFLAG)
         self.publisher_sonar.publish(i_32)
    
-        
-        
-
-    def get_range(self):
-        self._is_reading = True
-        #--- Call for a reading
-        GPIO.output(self._gpio_trigger, GPIO.HIGH)
+    def distance(self):
+        self.get_logger().info('In de distance functie')
+        GPIO.output(self._gpio_trigger, True)
         time.sleep(0.00001)
-        GPIO.output(self._gpio_trigger, GPIO.LOW)
-        
-        GPIO.output(self._gpio_trigger, GPIO.HIGH)
-        time.sleep(0.00001)
-        GPIO.output(self._gpio_trigger, GPIO.LOW)
-
-        
-        pulse_start_time = time.time()
-        pulse_end_time = time.time()
-        #--- Wait for the answer
-        """while GPIO.input(self._gpio_echo)==0:"""
-       
-        pulse_start_time = time.time()
-       
-            
-        time0= time.time()
-        #while GPIO.input(self._gpio_echo)==1:
-        pulse_end_time = time.time()
-       
-            
-        self._last_time_reading = time.time()
-        self._is_reading = False
-
-        pulse_duration = pulse_end_time - pulse_start_time
-        distance = pulse_duration * self._speed_sound
-        
-        if distance > self._range_max:
-            distance = self._range_max
-            
-        if distance < self._range_min:
-            distance = self._range_min
-            
-        return(distance)
+        GPIO.output(self._gpio_trigger, False)
+    
+        StartTime = time.time()
+        StopTime = time.time()
+    
+        # save StartTime
+        while GPIO.input(self._gpio_echo) == 0:
+            self.get_logger().info('In de eerste while lus')
+            StartTime = time.time()
+    
+        # save time of arrival
+        while GPIO.input(self._gpio_echo) == 1:
+            self.get_logger().info('In de tweede while lus')
+            StopTime = time.time()
+    
+        # time difference between start and arrival
+        TimeElapsed = StopTime - StartTime
+        # multiply with the sonic speed (34300 cm/s)
+        # and divide by 2, because there and back
+        distance = (TimeElapsed * 34300) / 2
+    
+        return distance
 
     @property
     def is_reading(self):
