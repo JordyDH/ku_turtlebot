@@ -10,7 +10,6 @@ class SubsLidar(Node):
         super().__init__('lidar_test')
 
         self.subscription = self.create_subscription(LaserScan, 'lidar', self.reaction, 10)
-        self.subscription
     
     def reaction(self, msg):
         print("Lidar info received")

@@ -12,7 +12,13 @@ class Lidar(Node):
         super().__init__('lidar_publisher')
         self.get_logger().info('Lidar service Starting')
         self.publisher_lidar = self.create_publisher(LaserScan, 'lidar', 10)
-        self.timer = self.create_timer(1/FREQ, self.timer_callback)
+        self.subscrib_lidar = self.create_subscription(LaserScan, "/kobuki/laser/scan", self.laser_callback, 10)
+        # self.timer = self.create_timer(1/FREQ, self.timer_callback)
+    
+    def laser_callback(self, msg):
+        # self.get_logger().info(msg)
+        self.publisher_lidar.publish(msg)
+        # print(msg)
     
     def timer_callback(self):
         self.getReading()
@@ -33,9 +39,6 @@ class Lidar(Node):
 
         scan.ranges = []
         scan.intensities = []
-        # for i in range(0, NUMREADINGS):
-        #     scan.ranges.append(1.0 * self.count)  # fake data
-        #     scan.intensities.append(1)  # fake data
 
         self.publisher_lidar.publish(scan)
 
