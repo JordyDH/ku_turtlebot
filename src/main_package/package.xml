@@ -6,19 +6,44 @@
   <description>This is the main package for the turtlebot project</description>
   <maintainer email="jordy@todo.todo">jordy</maintainer>
   <license>THE BEER-WARE license</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
   
+  
+
+  <build_depend>rosidl_default_generators</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>vision_msgs</build_depend>
+  <build_depend>object_msgs</build_depend>
+  <build_depend>my_robot_interfaces</build_depend>
+
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>vision_msgs</exec_depend>
+  <exec_depend>object_msgs</exec_depend>
   <exec_depend>cv2</exec_depend>
   <exec_depend>numpy</exec_depend>
   <exec_depend>CvBridge</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>my_robot_interfaces</exec_depend>
 
+  <build_export_depend>message_runtime</build_export_depend>
+  
+    
   <test_depend>ament_copyright</test_depend>
-  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_flake8</test_depend> 
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
 
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
+  
   <export>
     <build_type>ament_python</build_type>
   </export>

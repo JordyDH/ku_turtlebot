@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            //for train.py
+            "args": ["--dataset" , "traffic-signs", "--model","output/trafficsignnet.model", "--plot", "output/plot.png"] 
+            // "args": ["--dataset" , "traffic-signs", "--model","outputFullData/trafficsignnetFullData.model", "--plot", "outputFullData/plotFullData.png"] 
+            //for predict.py
+            // "args": ["--model" , "output/trafficssignnet.model", "--images","Test", "--examples", "examples"]
+            // "args": ["--model" , "outputFullData/trafficsignnetFullData.model", "--images","Test", "--examples", "examplesFullData"]
+            
+
+            
+        }
+    ]
+}

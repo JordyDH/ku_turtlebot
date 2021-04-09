@@ -11,9 +11,10 @@ class Subscriber(Node):
 	def __init__(self):
 		super().__init__('webcam_test')
 		self.bridge = CvBridge()
-		self.subscription = self.create_subscription(Image,'webcam',self.listener_callback,10)
+		self.subscription = self.create_subscription(Image,'webcam_det',self.listener_callback,10)
+		
 		self.subscription  # prevent unused variable warning
-
+		
 	def listener_callback(self, msg):
 		print("FRAME received")
 		frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
