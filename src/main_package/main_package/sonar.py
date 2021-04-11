@@ -8,7 +8,7 @@ from std_msgs.msg import *
 from sensor_msgs.msg import *
 
 BREAKFLAG = 1
-BREAKDISTANCE = 20
+BREAKDISTANCE = 5
 update = 10
 class Sonar(Node):
 
@@ -49,8 +49,9 @@ class Sonar(Node):
         i_32.data = self.distance()
         print (i_32.data)
     
-        #if afstandgelezen<BREAKDISTANCE: 
-            #self.publisher_break.publish(BREAKFLAG)
+        if i_32.data<BREAKDISTANCE: 
+            self.publisher_break.publish(BREAKFLAG)
+            self.get_logger().info('Break')
         self.publisher_sonar.publish(i_32)
    
     def distance(self):
