@@ -65,6 +65,10 @@ class Sonar(Node):
         while GPIO.input(self._gpio_echo) == 0:
             self.get_logger().info('In de eerste while lus')
             StartTime = time.time()
+            GPIO.output(self._gpio_trigger, True)
+            time.sleep(0.05)
+            GPIO.output(self._gpio_trigger, False)
+            time.sleep(0.05)
     
         # save time of arrival
         while GPIO.input(self._gpio_echo) == 1:
