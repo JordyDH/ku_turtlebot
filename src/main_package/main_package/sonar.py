@@ -34,11 +34,11 @@ class Sonar(Node):
 
         
 
-        GPIO.setup(self._gpio_trigger, GPIO.OUT)
-        GPIO.setup(self._gpio_echo, GPIO.IN)
+        GPIO.setup(17, GPIO.OUT)
+        GPIO.setup(17, GPIO.IN)
 
         #- Waiting for sensor to settle
-        GPIO.output(self._gpio_trigger, GPOW)
+        GPIO.output(27, GPOW)
         
         self.timer = self.create_timer(1/update, self.timer_callback)
         
@@ -85,6 +85,8 @@ class Sonar(Node):
 
 def main(args=None):
     rclpy.init(args=args)
+    PIN_TRIGGER = 5
+    PIN_ECHO = 6
     sonar_publisher = Sonar()
     rclpy.spin(sonar_publisher)	#Spin : laat de node actief blijven
     
