@@ -50,7 +50,9 @@ class Sonar(Node):
         print (i_32.data)
     
         if i_32.data<BREAKDISTANCE: 
-            self.publisher_break.publish(BREAKFLAG)
+            ii_32 = Int32()
+            ii_32.data = BREAKFLAG
+            self.publisher_break.publish(ii_32.data)
             self.get_logger().info('Break')
         self.publisher_sonar.publish(i_32)
    
