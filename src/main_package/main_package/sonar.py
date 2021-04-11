@@ -56,7 +56,7 @@ class Sonar(Node):
         self.get_logger().info('In de distance functie')
         GPIO.output(self._gpio_trigger, True)
         time.sleep(0.00001)
-        GPIO.output(self._gpio_trigger, False)
+        #GPIO.output(self._gpio_trigger, False)
     
         StartTime = time.time()
         StopTime = time.time()
