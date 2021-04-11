@@ -21,8 +21,8 @@ class Sonar(Node):
 
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
-        self._gpio_trigger  = 27
-        self._gpio_echo     = 17
+        self._gpio_trigger  = 13
+        self._gpio_echo     = 11
         self._range_min     = 10
         self._range_max     = 400
         self._is_reading    = False
