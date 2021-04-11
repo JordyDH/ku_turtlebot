@@ -38,7 +38,8 @@ class Sonar(Node):
         GPIO.setup(self._gpio_echo, GPIO.IN)
 
         #- Waiting for sensor to settle
-        #GPIO.output(self._gpio_trigger, GPOW)
+        
+        GPIO.output(self._gpio_trigger, False)
         
         self.timer = self.create_timer(1/update, self.timer_callback)
         
@@ -53,23 +54,16 @@ class Sonar(Node):
         self.publisher_sonar.publish(i_32)
    
     def distance(self):
-        self.get_logger().info('In de distance functie')
         GPIO.output(self._gpio_trigger, True)
         time.sleep(0.00001)
         GPIO.output(self._gpio_trigger, False)
-    
-        StartTime = time.time()
-        StopTime = time.time()
-    
         # save StartTime
         while GPIO.input(self._gpio_echo) == 0:
-            self.get_logger().info('In de eerste while lus')
             StartTime = time.time()
           
     
         # save time of arrival
         while GPIO.input(self._gpio_echo) == 1:
-            self.get_logger().info('In de tweede while lus')
             StopTime = time.time()
     
         # time difference between start and arrival
