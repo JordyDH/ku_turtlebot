@@ -34,11 +34,11 @@ class Sonar(Node):
 
         
 
-        GPIO.setup(17, GPIO.OUT)
-        GPIO.setup(17, GPIO.IN)
+        GPIO.setup(self._gpio_trigger, GPIO.OUT)
+        GPIO.setup(self._gpio_echo, GPIO.IN)
 
         #- Waiting for sensor to settle
-        GPIO.output(27, GPOW)
+        #GPIO.output(self._gpio_trigger, GPOW)
         
         self.timer = self.create_timer(1/update, self.timer_callback)
         
