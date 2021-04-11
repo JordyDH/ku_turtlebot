@@ -21,8 +21,8 @@ class Sonar(Node):
 
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
-        self._gpio_trigger  = 5
-        self._gpio_echo     = 6
+        self._gpio_trigger  = 27
+        self._gpio_echo     = 17
         self._range_min     = 10
         self._range_max     = 400
         self._is_reading    = False
@@ -34,11 +34,11 @@ class Sonar(Node):
 
         
 
-        GPIO.setup(5, GPIO.OUT)
-        GPIO.setup(6, GPIO.IN)
+        GPIO.setup(self._gpio_trigger, GPIO.OUT)
+        GPIO.setup(self._gpio_echo, GPIO.IN)
 
         #- Waiting for sensor to settle
-        GPIO.output(5, GPIO.LOW)
+        GPIO.output(self._gpio_trigger, GPOW)
         
         self.timer = self.create_timer(1/update, self.timer_callback)
         
@@ -85,8 +85,6 @@ class Sonar(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    PIN_TRIGGER = 5
-    PIN_ECHO = 6
     sonar_publisher = Sonar()
     rclpy.spin(sonar_publisher)	#Spin : laat de node actief blijven
     
