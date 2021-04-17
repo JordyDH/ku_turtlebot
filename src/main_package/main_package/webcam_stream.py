@@ -11,11 +11,7 @@ from sensor_msgs.msg import *
 
 FPS = 10
 # VIDEO_FILE = "data/test.mkv"
-<<<<<<< HEAD
 VIDEO_FILE = "data/stop_sign.mp4"
-=======
-VIDEO_FILE = "data/stop _sign.mp4"
->>>>>>> 18902b338c4ca15d82f6f9c067d90633b62fb915
 class Publisher(Node):
 
 	def __init__(self):
