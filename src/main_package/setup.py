@@ -29,7 +29,7 @@ setup(
 		"webcam = main_package.webcam:main",
 		"webcam_test = main_package.webcam_test:main",
 		"webcam_stream = main_package.webcam_stream:main",
-        "traffic_sign_detection = main_package.traffic_sign_detection:main",
+                "traffic_sign_detection = main_package.traffic_sign_detection:main",
         ],
     },
 )
