@@ -17,14 +17,13 @@
   <build_depend>geometry_msgs</build_depend>
   <build_depend>message_generation</build_depend>
   <build_depend>vision_msgs</build_depend>
-  <build_depend>object_msgs</build_depend>
   <build_depend>my_robot_interfaces</build_depend>
+  <build_depend>scipy</build_depend>
 
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>vision_msgs</exec_depend>
-  <exec_depend>object_msgs</exec_depend>
   <exec_depend>cv2</exec_depend>
   <exec_depend>numpy</exec_depend>
   <exec_depend>CvBridge</exec_depend>
@@ -32,6 +31,7 @@
   <exec_depend>rosidl_default_runtime</exec_depend>
   <exec_depend>message_runtime</exec_depend>
   <exec_depend>my_robot_interfaces</exec_depend>
+  <exec_depend>scipy</exec_depend>
 
   <build_export_depend>message_runtime</build_export_depend>
   
