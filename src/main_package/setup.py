@@ -29,6 +29,7 @@ setup(
 		"webcam = main_package.webcam:main",
 		"webcam_test = main_package.webcam_test:main",
 		"sonar_test = main_package.sonar:main",
+		"webcam_stream = main_package.webcam_stream:main",
         ],
     },
 )

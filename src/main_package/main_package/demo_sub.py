@@ -1,9 +1,12 @@
+# DEV  : <PLACE HERE YOUR NAME>
+# DATE : <DATE OF CREATION>
+# DESCRIPTION : 
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
 class Subscriber(Node):
-
     def __init__(self):
         super().__init__('Subscriber')
         self.subscription = self.create_subscription(String,'test_string',self.listener_callback,10)
