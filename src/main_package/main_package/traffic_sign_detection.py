@@ -33,6 +33,7 @@ class traffic_sign_detection(Node):
         
         gray = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
         img = cv2.medianBlur(gray, 37)
+        #return the center coordinates and the radius of the circles
         circles = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT,
                                 1, 50, param1=120, param2=40)
 
@@ -40,17 +41,22 @@ class traffic_sign_detection(Node):
             circles = np.uint16(np.around(circles))
             max_r, max_i = 0, 0
             for i in range(len(circles[:, :, 2][0])):
+                #choose the bigest circle 
                 if circles[:, :, 2][0][i] > 50 and circles[:, :, 2][0][i] > max_r:
                     max_i = i
                     max_r = circles[:, :, 2][0][i]
             x, y, r = circles[:, :, :][0][max_i]
             if y > r and x > r:
+                #extract the pixels inside the circle
                 square = cv_image[y-r:y+r, x-r:x+r] 
                 
+                #K-mean for two clusters
                 dominant_color = self.get_dominant_color(square, 2)
-                if dominant_color[2] > 50:#100
+                #check the red color
+                if dominant_color[2] > 50:
                     print("STOP")
                     cv2.putText(cv_image, "STOP",(120,35), cv2.FONT_HERSHEY_PLAIN, 1,(0,0,255),2, cv2.LINE_AA)
+                #check the blue color
                 elif dominant_color[0] > 80:
                     zone_0 = square[square.shape[0]*3//8:square.shape[0]
                                     * 5//8, square.shape[1]*1//8:square.shape[1]*3//8]
@@ -68,7 +74,7 @@ class traffic_sign_detection(Node):
                     zone_2_color = self.get_dominant_color(zone_2, 1)
                     
 
-                    if zone_1_color[2] < 60:#60
+                    if zone_1_color[2] < 60:
                         if sum(zone_0_color) > sum(zone_2_color):
                             print("LEFT")
                             cv2.putText(cv_image, "LEFT",(120,35), cv2.FONT_HERSHEY_PLAIN, 1,(0,0,255),2, cv2.LINE_AA)
@@ -83,11 +89,11 @@ class traffic_sign_detection(Node):
                             cv2.putText(cv_image, "FORWARD",(120,35), cv2.FONT_HERSHEY_PLAIN, 1,(0,0,255),2, cv2.LINE_AA)
 
                         elif sum(zone_0_color) > sum(zone_2_color):
-                            print("FORWARD ")#AND LEFT
+                            print("FORWARD ")
                             cv2.putText(cv_image, "FORWARD",(120,35), cv2.FONT_HERSHEY_PLAIN, 1,(0,0,255),2, cv2.LINE_AA)
 
                         else:
-                            print("FORWARD ")#AND RIGHT
+                            print("FORWARD ")
                             cv2.putText(cv_image, "FORWARD",(120,35), cv2.FONT_HERSHEY_PLAIN, 1,(0,0,255),2, cv2.LINE_AA)
 
                 else:
@@ -109,6 +115,7 @@ class traffic_sign_detection(Node):
         flags, labels, centroids = cv2.kmeans(
             pixels, n_colors, None, criteria, 10, flags)
         palette = np.uint8(centroids)
+        #return the color of the cluster with the most elements in it 
         return palette[np.argmax(itemfreq(labels)[:, -1])]
 
 
